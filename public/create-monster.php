@@ -7,9 +7,12 @@
     <div class="container">
       <!-- Nav view -->
       <?php require "../views/nav.php" ?>
+      <?php
+        require "../app/db.php";
+      ?>
 
       <div class="row">
-        <form method="get" action="build-monster.php">
+        <form method="get" action="store-monster.php">
           <fieldset class="form-group">
             <label for="monster-name">Monster's Name</label>
             <input class="form-control" name="monster-name" placeholder="Bill" required>
@@ -17,7 +20,7 @@
 
           <fieldset class="form-group">
             <label for="monster-name">Attack</label>
-            <input class="form-control" name="monster-name" placeholder="Claws, Fangs, Kick, etc. "required>
+            <input class="form-control" name="monster-attack" placeholder="Claws, Fangs, Kick, etc. "required>
           </fieldset>
 
           <div class="input-group">
