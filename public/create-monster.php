@@ -7,12 +7,10 @@
     <div class="container">
       <!-- Nav view -->
       <?php require "../views/nav.php" ?>
-      <?php
-        require "../app/db.php";
-      ?>
+      <?php require "../app/db.php"; ?>
 
       <div class="row">
-        <form method="get" action="store-monster.php">
+        <form method="get" action="../app/store-monster.php">
           <fieldset class="form-group">
             <label for="monster-name">Monster's Name</label>
             <input class="form-control" name="monster-name" placeholder="Bill" required>
@@ -24,9 +22,9 @@
           </fieldset>
 
           <div class="input-group">
-              <input type="radio" name="type" aria-label="...">Fire<br />
-              <input type="radio" name="type" aria-label="...">Water<br />
-              <input type="radio" name="type" aria-label="...">Nature<br />
+              <input type="radio" name="monster-type" value="fire" aria-label="...">Fire<br />
+              <input type="radio" name="monster-type" value="water" aria-label="...">Water<br />
+              <input type="radio" name="monster-type" value="nature" aria-label="...">Nature<br />
           </div>
 
           <input type="submit" value="Submit">
