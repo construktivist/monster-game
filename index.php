@@ -8,7 +8,10 @@
       <!-- Nav view -->
       <?php require "./views/nav.php" ?>
 
+      <hr />
 
+      <!-- Display all monsters -->
+      <?php require "./app/get-monsters.php" ?>
 
     </div>
     <!-- Script dependecies -->

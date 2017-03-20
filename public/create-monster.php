@@ -31,6 +31,11 @@
         </form>
       </div>
 
+      <hr />
+
+      <!-- Display all monsters -->
+      <?php require "../app/get-monsters.php" ?>
+
 
     </div>
     <!-- Script dependecies -->
