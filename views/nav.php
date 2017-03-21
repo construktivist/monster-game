@@ -3,6 +3,7 @@
 </div>
 
 <div Class="row">
-  <a href="./public/create-monster.php" class="btn btn-primary">Create Monster</a>
+  <a href="../create-monster.php" class="btn btn-primary">Create Monster</a>
+  <a href="" class="btn btn-primary">Arena</a>
 
 </div>
