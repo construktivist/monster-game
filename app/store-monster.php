@@ -43,5 +43,3 @@ if ($stmt->prepare($sql))
 else {
   echo "Error: " . $sql . " " . $connection->error;
 }
-
- ?>

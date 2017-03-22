@@ -8,11 +8,11 @@ class Monster{
 
   public $attack;
 
-  private $healthPoints;
+  public $healthPoints;
 
-  private $attackPoints;
+  public $attackPoints;
 
-  private $defensePoints;
+  public $defensePoints;
 
   public function __construct ($attack, $attackPoints, $defensePoints, $healthPoints, $name, $type){
     $this->name = $name;
@@ -40,16 +40,11 @@ class Monster{
 
   }
 
-  public function attackMonster($enemyDam) {
+  public function healMonster() {
       $heal = rand(2, 5);
       $this->healthPoints + $heal;
-      return $this->name " has healed " . $heal . " points";
+      return $this->name . " has healed " . $heal . " points";
 
   }
 
-
-
 }
-
-
- ?>
