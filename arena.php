@@ -30,6 +30,20 @@
         ?>
       </div>
 
+      <div class="row">
+        <?php
+
+        $output = "Select a monster to fight the Enemy Monster!";
+
+          echo "<div class='col-xs-12'>
+            <div class='well'>
+              {$output}
+            </div>
+          </div>"
+
+         ?>
+      </div>
+
       <!-- Display all monsters -->
       <div class="row">
         <?php require "./app/get-monsters.php" ?>

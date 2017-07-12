@@ -26,7 +26,7 @@
               <input type="radio" name="monster-type" value="nature" aria-label="...">Nature<br />
           </div>
 
-          <input type="submit"">
+          <input type="submit">
         </form>
       </div>
 
