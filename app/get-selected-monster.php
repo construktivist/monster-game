@@ -1,9 +1,12 @@
 <?php
 
+$name = $_POST["name"];
+//echo $name;
+
 include "db.php";
 $stmt = $connection->stmt_init();
 
-$sql = "SELECT * FROM monsters";
+$sql = "SELECT * FROM monsters WHERE name='$name'";
 $result = $connection->query($sql);
 
 if ($result->num_rows > 0){
