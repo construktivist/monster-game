@@ -11,7 +11,7 @@
       <div class="row">
         <?php
 
-          require "./app/battle-monsters.php";
+          require "./app/create-enemy.php";
 
           echo "<div class='col-xs-2'>
                   <div class='panel panel-default'>
@@ -45,7 +45,7 @@
       </div>
 
       <!-- Display all monsters -->
-      <div class="row">
+      <div id="monsters" class="row">
         <?php require "./app/get-monsters.php" ?>
       </div>
     <div>

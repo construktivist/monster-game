@@ -1,7 +1,6 @@
 <?php
 
 $name = $_POST["name"];
-//echo $name;
 
 include "db.php";
 $stmt = $connection->stmt_init();
@@ -22,7 +21,7 @@ if ($result->num_rows > 0){
                 Hit Points: {$row["hp"]} <br />
                 Attack: {$row["atck"]} <br />
                 Defense: {$row["def"]} <br />
-                <button class='btn btn-danger' value={$row["name"]}>Select and Fight</button>
+                <button id='fight' class='btn btn-danger' value={$row["name"]}>Fight</button>
               </div>
             </div>
     </div>";
