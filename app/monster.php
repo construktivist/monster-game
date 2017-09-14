@@ -23,13 +23,4 @@ class Monster{
     $this->defensePoints = $defensePoints;
   }
 
-  public function battle($enemyName, $enemyDamage) {
-    //if($this-)
-    $this->healthPoints -= $enemyDamage;
-    echo "$enemyName deals $enemyDamage to $this->name\n";
-    echo "Enemy Monster health is now $this->healthPoints\n";
-    echo " It works";
-  }
-
-
 }

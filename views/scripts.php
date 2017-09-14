@@ -23,6 +23,10 @@ $(document).ready(function(){
     .done(function(data){
       $("#monsters").html(data)
     })
+
+    $(".well").html(
+      "<p>Now Fight!</p>"
+    );
   })
 
   $(document).on("click", "#fight", function(e){
@@ -32,7 +36,7 @@ $(document).ready(function(){
     $.ajax({
       type:"POST",
       url:"../app/battle.php",
-      data: {monsterDamage: e.target.value},
+      data: {name: e.target.value},
       success: function(){
         console.log("AJAX request was successfull");
       },
