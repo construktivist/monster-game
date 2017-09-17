@@ -12,7 +12,6 @@ class Battle{
 
 
   private function checkHealth($player, $enemy){
-    echo "checkHealth\n";
 
     if ($player->healthPoints <= 0 && $enemy->healthPoints > 0){
       $this->declareWinner($enemy);
@@ -33,29 +32,29 @@ class Battle{
   }
 
   private function playerAttacks($player, $enemy){
-    echo "fight\n";
+    print "-$player->name attacks with $player->attack!\n";
 
     global $playerAttack;
     $playerAttack -= $enemy->defensePoints;
-    echo "$playerAttack\n";
+    print "-$player->name deals $playerAttack damage.\n";
     $enemy->healthPoints -= $playerAttack;
-    echo "$enemy->healthPoints\n";
+    print "-$enemy->name now has $enemy->healthPoints health.\n";
     $this->enemyCounterAttacks($player, $enemy);
   }
 
   private function enemyCounterAttacks($player, $enemy){
-    echo "counterAttack\n";
+    print "-$enemy->name counter attacks with $enemy->attack!\n";
 
     global $enemyAttack;
     $enemyAttack -= $player->defensePoints;
-    echo "$enemyAttack\n";
+    print "-$enemy->name deals $enemyAttack damage.\n";
     $player->healthPoints -= $enemyAttack;
-    echo "$enemy->healthPoints\n";
+    print "-$player->name now has $player->healthPoints health.\n";
     $this->startBattle($player, $enemy);
   }
 
   private function declareWinner($winner){
-    echo "$winner->name is the Champion!";
+     print "-$winner->name is the Champion!\n";
   }
 
 }

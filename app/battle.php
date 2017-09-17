@@ -5,6 +5,8 @@ require "run-battle.php";
 
 $name = $_POST["name"];
 
+echo "Monster name is $name";
+
 include "db.php";
 $stmt = $connection->stmt_init();
 
@@ -29,8 +31,5 @@ if ($result->num_rows > 0){
 $runBattle = new Battle;
 
 $runBattle->startBattle($playerMonster, $enemyMonster);
-
-
-
 
  ?>

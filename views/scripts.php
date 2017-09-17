@@ -24,14 +24,11 @@ $(document).ready(function(){
       $("#monsters").html(data)
     })
 
-    $(".well").html(
-      "<p>Now Fight!</p>"
-    );
+    $(".well").html("<p>Now Fight!</p>");
+
   })
 
   $(document).on("click", "#fight", function(e){
-
-    console.log("Clicked");
 
     $.ajax({
       type:"POST",
@@ -46,12 +43,20 @@ $(document).ready(function(){
     })
 
     .done(function(data){
-      console.log("Data returned");
-      console.log(data);
-    })
-});
 
+      $(".well").html("<p>The Fight Begins!</p>");
 
+      var combatLog = data.split("-");
+
+      for (var i = 1; i < combatLog.length; i++) {
+        $(".well").append(combatLog[i] + "<br />")
+      }
+
+      $(".well").append("<a href='../arena.php' class='btn btn-success'>Arena</a>")
+
+    });
+
+  });
 
 });
 

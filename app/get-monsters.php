@@ -19,7 +19,7 @@ if ($result->num_rows > 0){
                 Hit Points: {$row["hp"]} <br />
                 Attack: {$row["atck"]} <br />
                 Defense: {$row["def"]} <br />
-                <button class='btn btn-danger' value={$row["name"]}>Select Monster</button>
+                <button class='btn btn-danger' value='{$row["name"]}'>Select Monster</button>
               </div>
             </div>
     </div>";
